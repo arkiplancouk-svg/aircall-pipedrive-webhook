@@ -1,20 +1,20 @@
 app = "aircall-pipedrive-webhook"
 
 [build]
+  dockerfile = "Dockerfile"
 
 [env]
   NODE_ENV = "production"
 
 [[services]]
   protocol = "tcp"
-  internal_port = 3000   # our app listens on 3000
+  internal_port = 3000
 
   [[services.ports]]
     port = 80
   [[services.ports]]
     port = 443
 
-  # Health check: GET /
   [[services.http_checks]]
     interval = "10s"
     timeout = "2s"
