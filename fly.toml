@@ -1,4 +1,4 @@
-app = "aircall-pipedrive-webhook"
+app = "aircall-pipedrive-webhook-2"
 
 [build]
   dockerfile = "Dockerfile"
